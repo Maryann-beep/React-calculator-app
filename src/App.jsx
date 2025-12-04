@@ -46,7 +46,10 @@ function App() {
       <div className="display-screen">{display}</div>
       <div className="buttons-container">
         {buttons.map((btn) => (
-          <button key={btn} onClick={() => handleClick(btn)}>
+          <button 
+          key={btn} 
+          className={`button ${btn === 'C' ? 'clear-btn' : ''} ${btn === '=' ? 'equal-btn' : ''} ${btn === '+' ? 'add-btn' : ''}`}
+          onClick={() => handleClick(btn)}>
             {btn}
           </button>
         ))}
