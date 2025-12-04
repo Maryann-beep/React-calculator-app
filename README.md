@@ -24,7 +24,7 @@ A simple calculator built with **React**. This is my very first React project, a
 Building and deploying this project taught me some important lessons:
 
 - **React apps need a build step**  
-  Unlike plain HTML/CSS/JS projects, you can’t just push files to GitHub Pages. You must run `npm run build` to generate a `build/` folder.
+  Unlike plain HTML/CSS/JS projects, you can’t just push files to GitHub Pages. You must run `npm run build` to generate a `build/` folder and `npm run deploy` to deploy project.
 
 - **Configuring GitHub Pages for React**  
   Adding the `homepage` field in `package.json` ensures assets load correctly from the subpath.
@@ -43,7 +43,7 @@ Building and deploying this project taught me some important lessons:
 ### Run Locally
 Clone the repo and install dependencies:
 ```bash
-git clone https://github.com/<your-username>/React-calculator-app.git
+git clone https://github.com/Maryann-beep/React-calculator-app
 cd React-calculator-app
 npm install
 npm start
@@ -53,7 +53,7 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 ### Deploy to GitHub Pages
 1. Add the `homepage` field to `package.json`:
    ```json
-   "homepage": "https://<your-username>.github.io/React-calculator-app"
+   "homepage": "https://maryann-beep.github.io/React-calculator-app/"
    ```
 2. Install the `gh-pages` package:
    ```bash
@@ -79,21 +79,15 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 ---
 
 ## 🌍 Live Demo
-👉 [React Calculator App](https://<your-username>.github.io/React-calculator-app/)
+👉 Check out the calculator [React Calculator App](https://maryann-beep.github.io/React-calculator-app/)
 
 ---
 
 ## 🎉 Final Thoughts
-This calculator may be simple, but it marks the start of my React journey. Deploying it showed me that:
-- Static sites are easy, but modern frameworks demand more setup.  
-- GitHub Pages is a great way to share projects publicly.  
-- Every blank page fixed is a victory worth celebrating.  
+This calculator may be simple, but it marks the start of my React journey. I would appreciate your honest feedback both criticism and constructive feedbacks, it would help me iterate and do better. 
 
+Thank you for checking out my project! 😊
 ---
 
 ## 📸 Screenshots (Optional)
-_Add screenshots of the app here to showcase the UI._
-
---- 
-
-Thank you for checking out my project! 😊
+![The calculator app screenshot](assets/image.png)
