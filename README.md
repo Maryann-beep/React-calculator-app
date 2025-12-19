@@ -20,6 +20,12 @@ A simple calculator built with **React**. This is my very first React project, a
 
 ---
 
+## 🌍 Live Demo
+👉 Check out the calculator [React Calculator App](https://Mary1na-Code.github.io/React-calculator-app/)
+
+
+---
+
 ## 📚 Lessons Learned
 Building and deploying this project taught me some important lessons:
 
@@ -35,6 +41,7 @@ Building and deploying this project taught me some important lessons:
 
 - **GitHub Pages only serves static files**  
   No Node.js backend, no server-side rendering. Everything must be prebuilt.
+
 
 ---
 
@@ -75,11 +82,6 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
    Branch: gh-pages
    Folder: / (root)
    ```
-
----
-
-## 🌍 Live Demo
-👉 Check out the calculator [React Calculator App](https://maryann-beep.github.io/React-calculator-app/)
 
 ---
 
