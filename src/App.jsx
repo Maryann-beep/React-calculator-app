@@ -17,9 +17,9 @@ function App() {
     if (value === "C") {
       setTokens([]);
       setDisplay("0");
-      return;
+      return; 
     }
-
+ 
     if (value === "=") {
       try {
         // join tokens into a string expression

@@ -89,3 +89,4 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 This calculator may be simple, but it marks the start of my React journey. I would appreciate your honest feedback both criticism and constructive feedbacks, it would help me iterate and do better. 
 
 Thank you for checking out my project! 😊
+
