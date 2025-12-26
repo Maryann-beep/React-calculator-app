@@ -46,6 +46,14 @@ html {
   gap: 1rem;
 }
 
+.buttons-container button:last-child{
+  grid-column:span 2;
+}
+
+.buttons-container button:nth-child(9){
+  grid-row:span 2;
+}
+
 button {
   font: 600 1.8rem "Quicksand", sans-serif;
   color: rgb(77, 77, 77);
