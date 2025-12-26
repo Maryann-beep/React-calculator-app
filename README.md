@@ -77,6 +77,10 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
    ```bash
    npm run deploy
    ```
+   Set homepage in package.json
+   ```
+   "homepage": "https://<username>.github.io/<repo-name>/"
+   ```
 5. Make sure your repo’s **Settings → Pages** is set to:
    ```
    Branch: gh-pages
@@ -84,6 +88,13 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
    ```
 
 ---
+
+### Update app on GitHub Pages
+Run
+```
+npm run deploy
+```
+to update the /build folder and the app on github pages.
 
 ## 🎉 Final Thoughts
 This calculator may be simple, but it marks the start of my React journey. I would appreciate your honest feedback both criticism and constructive feedbacks, it would help me iterate and do better. 
