@@ -60,7 +60,7 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 ### Deploy to GitHub Pages
 1. Add the `homepage` field to `package.json`:
    ```json
-   "homepage": "https://maryann-beep.github.io/React-calculator-app/"
+   "homepage": "https://mary1na-code.github.io/React-calculator-app/"
    ```
 2. Install the `gh-pages` package:
    ```bash
@@ -79,7 +79,7 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
    ```
    Set homepage in package.json
    ```
-   "homepage": "https://<username>.github.io/<repo-name>/"
+   "homepage": "https://mary1na-code.github.io/React-calculator-app/"
    ```
 5. Make sure your repo’s **Settings → Pages** is set to:
    ```

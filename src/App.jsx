@@ -1,55 +1,57 @@
 import { useState } from "react";
-import { evaluate } from "mathjs"; // mathjs safely evaluates expressions
+import { evaluate } from "mathjs";
 import "./App.css";
 
-function App() {
-  const buttons = [
-    "C", "/", "x", "-",
-    "7", "8", "9", "+",
-    "4", "5", "6", "=",
-    "1", "2", "3", "0", "."
-  ];
+const BUTTONS = [
+  "C", "⌫", "/", "x", "-",
+  "7", "8", "9", "+",
+  "4", "5", "6", "=",
+  "1", "2", "3", "0", "."
+];
 
-  const [tokens, setTokens] = useState([]); // store everything as tokens
-  const [display, setDisplay] = useState("0");
+const OPERATORS = ["/", "x", "-", "+"];
 
-  const handleClick = (value) => {
-    if (value === "C") {
-      setTokens([]);
-      setDisplay("0");
-      return; 
-    }
- 
-    if (value === "=") {
+export default function App() {
+  const [expression, setExpression] = useState("");
+
+  const handleInput = (val) => {
+    if (val === "C") return setExpression("");
+
+    if (val === "⌫"){
+      setExpression(prev => prev.slice(0, -1));
+      return;
+    } 
+    
+    if (val === "=") {
       try {
-        // join tokens into a string expression
-        const expr = tokens.join(" ").replace(/x/g, "*");
-        const result = evaluate(expr);
-        setDisplay(String(result));
-        setTokens([String(result)]); // allow chaining further calculations
+        const result = evaluate(expression.replace(/x/g, "*"));
+        setExpression(String(result));
       } catch {
-        setDisplay("Error");
-        setTokens([]);
+        setExpression("Error");
       }
       return;
     }
 
-    // otherwise add token
-    setTokens((prev) => [...prev, value]);
-    setDisplay((prev) =>
-      prev === "0" ? value : prev + value
-    );
+    // Prevent double operators
+    const lastChar = expression.slice(-1);
+    if (OPERATORS.includes(val) && OPERATORS.includes(lastChar)) {
+      setExpression(prev => prev.slice(0, -1) + val);
+      return;
+    }
+
+    setExpression(prev => (prev === "0" ? val : prev + val));
   };
 
   return (
     <div className="calculator">
-      <div className="display-screen">{display}</div>
+      <div className="display-screen">{expression || "0"}</div>
       <div className="buttons-container">
-        {buttons.map((btn) => (
+        {BUTTONS.map((btn) => (
           <button 
-          key={btn} 
-          className={`button ${btn === 'C' ? 'clear-btn' : ''} ${btn === '=' ? 'equal-btn' : ''} ${btn === '+' ? 'add-btn' : ''}`}
-          onClick={() => handleClick(btn)}>
+            key={btn}
+            className={`button ${getBtnClass(btn)}`}
+            onClick={() => handleInput(btn)}
+          >
             {btn}
           </button>
         ))}
@@ -58,4 +60,9 @@ function App() {
   );
 }
 
-export default App;
+const getBtnClass = (btn) => {
+  if (btn === "C") return "clear-btn";
+  if (btn === "=") return "equal-btn";
+  if (["+", "-", "x", "/"].includes(btn)) return "operator-btn";
+  return "";
+};
